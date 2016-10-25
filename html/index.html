@@ -1,0 +1,298 @@
+<html>
+<head>
+
+</head>
+<body>
+<style>
+    /* worst css chunk ever */
+    body {
+        font-family: sans-serif;
+    }
+    #output {
+        list-style-type: none;
+        padding: 0;
+    }
+    #output li strong {
+        font-weight: normal;
+    }
+</style>
+<select name="via" id="via" onchange="javascript:yo(this);">
+    <option selected="selected" value="">-- Seleziona --</option>
+    <option value="785">ABBADIA (VIA)</option>
+    <option value="786">ACRI (VIA)</option>
+    <option value="787">ALBIROLI (VIA)</option>
+    <option value="788">ALESSANDRINI (VIA)</option>
+    <option value="789">ALTABELLA (VIA)</option>
+    <option value="790">ALTASETA (VIA)</option>
+    <option value="791">AMENDOLA (VIA)</option>
+    <option value="792">ARIENTI (VIA)</option>
+    <option value="793">AVESELLA (VIA)</option>
+    <option value="753">AZZARITA (PIAZZA)</option>
+    <option value="794">AZZO GARDINO (VIA)</option>
+    <option value="992">BARBAZZI (VICOLO)</option>
+    <option value="795">BARBERIA (VIA)</option>
+    <option value="796">BAROZZI (VIA)</option>
+    <option value="797">BATTISTELLI (VIA)</option>
+    <option value="798">BATTISTI C. (VIA)</option>
+    <option value="799">BEGATTO (VIA)</option>
+    <option value="800">BELFIORE (VIA)</option>
+    <option value="801">BELMELORO (VIA)</option>
+    <option value="802">BELVEDERE (VIA)</option>
+    <option value="803">BENEDETTO XIV (VIA)</option>
+    <option value="984">BERTI PICHAT (VIALE)</option>
+    <option value="804">BERTIERA (VIA)</option>
+    <option value="805">BERTOLONI (VIA)</option>
+    <option value="993">BIANCHETTI (VICOLO)</option>
+    <option value="806">BOCCA DI LUPO (VIA)</option>
+    <option value="807">BOLDRINI (VIA)</option>
+    <option value="994">BOLOGNETTI (VICOLO)</option>
+    <option value="808">BORGONUOVO (VIA)</option>
+    <option value="809">BOVI CAMPEGGI (VIA)</option>
+    <option value="810">BRAINA (VIA)</option>
+    <option value="811">BROCCAINDOSSO (VIA)</option>
+    <option value="812">BRUGNOLI (VIA)</option>
+    <option value="813">CA' SELVATICA (VIA)</option>
+    <option value="814">CAIROLI (VIA)</option>
+    <option value="815">CALARI (VIA)</option>
+    <option value="754">CALDERINI (PIAZZA)</option>
+    <option value="816">CALORI (VIA)</option>
+    <option value="817">CALZOLERIE (VIA)</option>
+    <option value="818">CAPO DI LUCCA (VIA)</option>
+    <option value="819">CAPRAMOZZA (VIA)</option>
+    <option value="820">CAPRARIE (VIA)</option>
+    <option value="985">CARDUCCI (VIALE)</option>
+    <option value="821">CARTOLERIA (VIA)</option>
+    <option value="822">CASTELFIDARDO (VIA)</option>
+    <option value="823">CASTIGLIONE (VIA)</option>
+    <option value="824">CENTOTRECENTO (VIA)</option>
+    <option value="825">CERVELLATI (VIA)</option>
+    <option value="826">CHIUDARE (VIA)</option>
+    <option value="827">COLLEGIO DI SPAGNA (VIA)</option>
+    <option value="828">COSTA A. (VIA)</option>
+    <option value="830">D'AZEGLIO (VIA)</option>
+    <option value="829">DANTE (VIA)</option>
+    <option value="831">DE' CARBONESI (VIA)</option>
+    <option value="840">DE' CASTAGNOLI (VIA)</option>
+    <option value="839">DE' CHIARI (VIA)</option>
+    <option value="832">DE' COLTELLI (VIA)</option>
+    <option value="833">DE' FALEGNAMI (VIA)</option>
+    <option value="834">DE' MARCHI (VIA)</option>
+    <option value="835">DE' MATTUIANI (VIA)</option>
+    <option value="836">DE' POETI (VIA)</option>
+    <option value="837">DE' ROLANDIS (VIA)</option>
+    <option value="838">DE' TESSITORI (VIA)</option>
+    <option value="841">DEGLI ANDALO' (VIA)</option>
+    <option value="842">DEGLI ANGELI (VIA)</option>
+    <option value="843">DEGLI ARTIERI (VIA)</option>
+    <option value="844">DEGLI OREFICI (VIA)</option>
+    <option value="845">DEI BIBIENA (VIA)</option>
+    <option value="781">DEI CARABINIERI (PIAZZETTA) </option>
+    <option value="755">DEI MARTIRI (PIAZZA)</option>
+    <option value="846">DEI MILLE (VIA)</option>
+    <option value="847">DEI TERRIBILIA (VIA)</option>
+    <option value="756">DEI TRIBUNALI (PIAZZA)</option>
+    <option value="757">DEL BARACCANO (PIAZZA)</option>
+    <option value="848">DEL BORGO S.PIETRO (VIA)</option>
+    <option value="849">DEL CANE (VIA)</option>
+    <option value="850">DEL CESTELLO (VIA)</option>
+    <option value="995">DEL FALCONE (VICOLO)</option>
+    <option value="851">DEL FICO (VIA)</option>
+    <option value="852">DEL FOSSATO (VIA)</option>
+    <option value="758">DEL FRANCIA (PIAZZA)</option>
+    <option value="853">DEL MONTE (VIA)</option>
+    <option value="854">DEL PALLONE (VIA)</option>
+    <option value="855">DEL PIOMBO (VIA)</option>
+    <option value="856">DEL PORTO (VIA)</option>
+    <option value="857">DEL PRATELLO (VIA)</option>
+    <option value="858">DEL RONDONE (VIA)</option>
+    <option value="869">DELL'ORO (VIA)</option>
+    <option value="870">DELL'UNIONE (VIA)</option>
+    <option value="859">DELLA GRADA (VIA)</option>
+    <option value="860">DELLA LIBERTA' (VIA)</option>
+    <option value="759">DELLA MERCANZIA (PIAZZA)</option>
+    <option value="861">DELLA RONDINE (VIA)</option>
+    <option value="862">DELLA ZECCA (VIA)</option>
+    <option value="863">DELLE BELLE ARTI (VIA)</option>
+    <option value="864">DELLE DONZELLE (VIA)</option>
+    <option value="865">DELLE LAME (VIA)</option>
+    <option value="866">DELLE MOLINE (VIA)</option>
+    <option value="867">DELLE OCHE (VIA)</option>
+    <option value="868">DELLE TOVAGLIE (VIA)</option>
+    <option value="871">DOLFI (VIA)</option>
+    <option value="872">DON MINZONI (VIA)</option>
+    <option value="873">ERCOLANI (VIA)</option>
+    <option value="874">FARINI (VIA)</option>
+    <option value="875">FILIPPORE (VIA)</option>
+    <option value="876">FINELLI (VIA)</option>
+    <option value="877">FONDAZZA (VIA)</option>
+    <option value="878">FOSCOLO (VIA)</option>
+    <option value="879">FRASSINAGO (VIA)</option>
+    <option value="880">FRATELLI ROSSELLI (VIA)</option>
+    <option value="881">GALLIERA (VIA)</option>
+    <option value="882">GARIBALDI (VIA)</option>
+    <option value="883">GOITO (VIA)</option>
+    <option value="884">GRABINSKI (VIA)</option>
+    <option value="885">GRAMSCI (VIA)</option>
+    <option value="886">GRAZIANO (VIA)</option>
+    <option value="887">GRIMALDI (VIA)</option>
+    <option value="888">GUERRAZZI (VIA)</option>
+    <option value="889">GUIDORENI (VIA)</option>
+    <option value="890">INDIPENDENZA (VIA)</option>
+    <option value="891">IRNERIO (VIA)</option>
+    <option value="892">IV NOVEMBRE (VIA)</option>
+    <option value="893">LENZI (VIA)</option>
+    <option value="894">LEOPARDI (VIA)</option>
+    <option value="895">MAJANI (VIA)</option>
+    <option value="896">MAJORANA (VIA)</option>
+    <option value="897">MALAGUTI (VIA)</option>
+    <option value="898">MALCONTENTI (VIA)</option>
+    <option value="899">MALPERTUSO (VIA)</option>
+    <option value="770">MALPIGHI (PIAZZA)</option>
+    <option value="900">MARCONI (VIA)</option>
+    <option value="996">MARISCOTTI (VICOLO)</option>
+    <option value="901">MARONCELLI (VIA)</option>
+    <option value="902">MARSALA (VIA)</option>
+    <option value="903">MASCARELLA (VIA)</option>
+    <option value="986">MASINI (VIALE)</option>
+    <option value="904">MASSARENTI (VIA)</option>
+    <option value="905">MAZZINI (VIA)</option>
+    <option value="906">MENARINI (VIA)</option>
+    <option value="907">MENOTTI (VIA)</option>
+    <option value="908">MENTANA (VIA)</option>
+    <option value="909">MILAZZO (VIA)</option>
+    <option value="771">MINGHETTI (PIAZZA)</option>
+    <option value="910">MIRAMONTE (VIA)</option>
+    <option value="911">MIRASOLE (VIA)</option>
+    <option value="912">MONTEBELLO (VIA)</option>
+    <option value="913">MONTEGRAPPA (VIA)</option>
+    <option value="772">MORANDI (PIAZZA)</option>
+    <option value="914">MORANDI (VIA)</option>
+    <option value="915">MORGAGNI (VIA)</option>
+    <option value="916">MURRI (VIA)</option>
+    <option value="917">NANNETTI (VIA)</option>
+    <option value="918">NAZARIOSAURO (VIA)</option>
+    <option value="919">NOSADELLA (VIA)</option>
+    <option value="920">OBERDAN (VIA)</option>
+    <option value="921">ORFEO (VIA)</option>
+    <option value="997">OTTO COLONNE (VICOLO)</option>
+    <option value="922">PAGLIETTA (VIA)</option>
+    <option value="923">PALESTRO (VIA)</option>
+    <option value="924">PARIGI (VIA)</option>
+    <option value="925">PASCOLI (VIA)</option>
+    <option value="926">PASTRENGO (VIA)</option>
+    <option value="987">PEPOLI (VIALE)</option>
+    <option value="927">PETRONI (VIA)</option>
+    <option value="928">PIELLA (VIA)</option>
+    <option value="929">PIETRALATA (VIA)</option>
+    <option value="988">PIETRAMELLARA (VIALE)</option>
+    <option value="930">POLESE (VIA)</option>
+    <option value="749">PORTA CASTIGLIONE (MURA) </option>
+    <option value="760">PORTA CASTIGLIONE (PIAZZA)</option>
+    <option value="750">PORTA D'AZEGLIO (MURA) </option>
+    <option value="751">PORTA GALLIERA (MURA) </option>
+    <option value="761">PORTA MAGGIORE (PIAZZA)</option>
+    <option value="762">PORTA MASCARELLA (PIAZZA)</option>
+    <option value="764">PORTA S.DONATO (PIAZZA)</option>
+    <option value="763">PORTA S.FELICE (PIAZZA)</option>
+    <option value="765">PORTA S.ISAIA (PIAZZA)</option>
+    <option value="766">PORTA S.MAMOLO (PIAZZA)</option>
+    <option value="767">PORTA S.STEFANO (PIAZZA)</option>
+    <option value="768">PORTA S.VITALE (PIAZZA)</option>
+    <option value="752">PORTA SARAGOZZA (MURA) </option>
+    <option value="769">PORTA SARAGOZZA (PIAZZA)</option>
+    <option value="782">PRENDIPARTE (PIAZZETTA) </option>
+    <option value="773">PUNTONI (PIAZZA)</option>
+    <option value="931">RANZANI (VIA)</option>
+    <option value="932">REMORSELLA (VIA)</option>
+    <option value="747">RESPIGHI (LARGO)</option>
+    <option value="933">RIALTO (VIA)</option>
+    <option value="934">RIGHI A. (VIA)</option>
+    <option value="935">RISMONDO (VIA)</option>
+    <option value="936">RIVA RENO (VIA)</option>
+    <option value="774">ROOSEVELT (PIAZZA)</option>
+    <option value="775">ROSSINI (PIAZZA)</option>
+    <option value="937">RUBBIANI (VIA)</option>
+    <option value="938">S.CARLO (VIA)</option>
+    <option value="939">S.CATERINA (VIA)</option>
+    <option value="940">S.CROCE (VIA)</option>
+    <option value="941">S.DOMENICO (VIA)</option>
+    <option value="942">S.DONATO (VIA)</option>
+    <option value="943">S.FELICE (VIA)</option>
+    <option value="776">S.FRANCESCO (PIAZZA)</option>
+    <option value="944">S.GERVASIO (VIA)</option>
+    <option value="945">S.GIACOMO (VIA)</option>
+    <option value="946">S.GIORGIO (VIA)</option>
+    <option value="947">S.GIULIANO (VIA)</option>
+    <option value="948">S.ISAIA (VIA)</option>
+    <option value="949">S.LORENZO (VIA)</option>
+    <option value="998">S.LUCIA (VICOLO)</option>
+    <option value="950">S.MAMOLO (VIA)</option>
+    <option value="951">S.MARGHERITA (VIA)</option>
+    <option value="777">S.MICHELE (PIAZZA)</option>
+    <option value="952">S.PETRONIO VECCHIO (VIA)</option>
+    <option value="953">S.PROCOLO (VIA)</option>
+    <option value="954">S.ROCCO (VIA)</option>
+    <option value="955">S.SIGISMONDO (VIA)</option>
+    <option value="956">S.STEFANO (VIA)</option>
+    <option value="957">S.VALENTINO (VIA)</option>
+    <option value="958">S.VITALE (VIA)</option>
+    <option value="959">SAFFI (VIA)</option>
+    <option value="960">SARAGOZZA (VIA)</option>
+    <option value="961">SAVENELLA (VIA)</option>
+    <option value="962">SELMI (VIA)</option>
+    <option value="963">SENZANOME (VIA)</option>
+    <option value="989">SILVANI (VIALE)</option>
+    <option value="964">SOLFERINO (VIA)</option>
+    <option value="965">SORBELLI (VIA)</option>
+    <option value="784">STRADA MAGGIORE </option>
+    <option value="783">STRADA MAGGIORE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+    <option value="999">STRADELLACCIO (VICOLO)</option>
+    <option value="966">STRAZZACAPPE (VIA)</option>
+    <option value="967">TAGLIAPIETRE (VIA)</option>
+    <option value="968">TANARI VECCHIA (VIA)</option>
+    <option value="969">TESTONI (VIA)</option>
+    <option value="970">TODARO (VIA)</option>
+    <option value="971">TOFFANO (VIA)</option>
+    <option value="972">TORLEONE (VIA)</option>
+    <option value="748">TROMBETTI (LARGO)</option>
+    <option value="973">URBANA (VIA)</option>
+    <option value="974">VAL D'APOSA (VIA)</option>
+    <option value="975">VASCELLI (VIA)</option>
+    <option value="976">VENEZIAN (VIA)</option>
+    <option value="977">VENTURINI (VIA)</option>
+    <option value="778">VERDI (PIAZZA)</option>
+    <option value="990">VICINI (VIALE)</option>
+    <option value="779">VII NOVEMBRE (PIAZZA)</option>
+    <option value="978">VINAZZETTI (VIA)</option>
+    <option value="991">XII GIUGNO (VIALE)</option>
+    <option value="780">XX SETTEMBRE (PIAZZA)</option>
+    <option value="979">ZAMBONI (VIA)</option>
+    <option value="980">ZANARDI (VIA)</option>
+    <option value="981">ZANOLINI (VIA)</option>
+    <option value="982">ZAPPOLI (VIA)</option>
+    <option value="983">ZUCCHINI (VIA)</option>
+</select>
+<ul id="output"></ul>
+<script>
+    var yo=function(sel){
+        var selectedValue = sel.value;
+        if(self.fetch) {
+            var options = { method: 'GET',
+                headers: new Headers(),
+                mode: 'cors',
+                cache: 'default'
+            };
+            fetch('/street/' + selectedValue, options).then(function(response) {
+                return response.text();
+            }).then(function(textResponse) {
+                var returningTextResponse = textResponse.split('<ul>')[1].split('</ul>')[0]; // brrr
+                var outputElement = document.getElementById("output");
+                outputElement.innerHTML = returningTextResponse;
+            });
+        } else {
+            alert("no fetch implementation"); //use polyfill
+        }
+    }
+</script>
+</body>
+</html>
