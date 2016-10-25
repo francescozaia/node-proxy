@@ -4,5 +4,5 @@ node_js:
 deploy:
   provider: heroku
   api_key:
-    secure: $HEROKU_TOKEN
+    secure: 0695c37520b1b06dfd5e6634b4cc6e7285005622
   run: "node server"
