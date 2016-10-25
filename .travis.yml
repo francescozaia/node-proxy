@@ -6,4 +6,3 @@ deploy:
   api_key:
     secure: $HEROKU_TOKEN
   run: "node server"
-  app: "node-proxy"
